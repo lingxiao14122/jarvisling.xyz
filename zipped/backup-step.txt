@@ -1,0 +1,7 @@
+sudo zip -r all.zip .
+
+then move file to zipped folder🎈🎈
+
+
+dont use chmod use sudo!!!!!!
+sudo chmod -R 777 .

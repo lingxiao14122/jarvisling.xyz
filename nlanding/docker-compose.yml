@@ -1,0 +1,21 @@
+version: '3'
+services:
+  app:
+    image: 'bitnami/apache:latest'
+    ports:
+      - '83:8080'
+    #   - '443:443'
+    # environment:
+    #   DB_MYSQL_HOST: "db"
+    #   DB_MYSQL_PORT: 3306
+    #   DB_MYSQL_USER: "npm"
+    #   DB_MYSQL_PASSWORD: "npm"
+    #   DB_MYSQL_NAME: "npm"
+    volumes:
+      - ./app:/app
+      - ./bitnami/bitnami.conf:/home/ubuntu/nlanding/bitnami/bitnami.conf
+      # - ./htdocs:/opt/bitnami/apache/htdocs
+  web:
+    image: 'jarvisling/getting-started'
+    ports:
+      - '82:3000'
